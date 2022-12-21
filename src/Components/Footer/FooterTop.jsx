@@ -1,17 +1,23 @@
 import { Button } from '@mui/material'
 import { Box } from '@mui/system'
 import React from 'react'
-import "./FooterTop.css"
+import { styled } from '@mui/material/styles';
 const FooterTop = () => {
+  const Boxcss =styled(Box)`
+  padding-left: 100px;
+  `
+  const Boxcss1=styled(h3)`
+  padding-bottom: 20px;
+  `
   return (
-    <Box className='ReservationBox'>
-        <h3 className='FooterReservation'>RESERVATIONS</h3>
+    <Boxcss >
+        <Boxcss1 className='FooterReservation'>RESERVATIONS</Boxcss1>
         <ul className='NoBullet'>
             <li><Button className='ReservationButtonOne'>Modify/Cancel</Button></li>
         </ul>
         
 
-    </Box>
+    </Boxcss>
   )
 }
 
