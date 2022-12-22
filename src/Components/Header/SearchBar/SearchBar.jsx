@@ -2,10 +2,6 @@ import React from 'react'
 import InputBase from '@mui/material/InputBase';
 import { Box, Button } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
-import TextField from '@mui/material/TextField';
-
-
-
 
 const SearchBar = () => {
   return (
