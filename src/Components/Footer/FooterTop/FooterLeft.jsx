@@ -3,7 +3,7 @@ import { Box, Typography } from '@mui/material'
 import React from 'react'
 
 const Container = styled('Box') (() => ({
-    width:'230px',
+    width:'250px',
     display:'flex',
     flexFlow:'column',
     justifyContent:'flex-start',

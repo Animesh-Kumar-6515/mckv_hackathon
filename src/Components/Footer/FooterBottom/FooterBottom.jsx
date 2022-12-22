@@ -4,21 +4,31 @@ import React from 'react'
 import { styled } from '@mui/material/styles';
 
 
-const Buttoncss = styled(Button)`
-color: white;
-font-size: 10px;
-`
-const Xyz = styled(Button)`
-color:red;
-`
+const Buttoncss = styled(Button)({
+  color: "white",
+  fontSize: "10px",
+  textAlign:"left",
+  paddingRight:"30px",
+  '&:hover':{
+    textDecoration:"underline"
+  }
+})
+
+const Xyz = styled(Button)({
+  color:"#3a86ff",
+  fontSize:"10px",
+})
 const Footer = () => {
 
   return (
     <Box sx={{
         display:"flex",
-        paddingLeft:"150px",
+        flexWrap:"wrap",
+        textAlign:"center",
+        justifyContent:"space-between",
+        padding:"25px 7%",
         background:"black",
-        height:"60px"
+        // height:"60px"
     }}>
         
         <Buttoncss >Privacy Policy</Buttoncss>
