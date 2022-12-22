@@ -3,33 +3,41 @@ import { Box, Button, Menu, MenuItem } from "@mui/material";
 import React, { useState } from "react";
 
 const NavTitles = () => {
-  const [openExplore, setOpenExplore] = useState(false);
-  const [openLoyalty, setOpenLoyalty] = useState(false);
-  const handleExplore = () => {
-    setOpenExplore(!openExplore);
+  const [anchorExplore, setAnchorExplore] = useState(null)
+  const [anchorLoyalty, setAnchorLoyalty] = useState(null)
+  const openExplore = Boolean(anchorExplore);
+  const openLoyalty = Boolean(anchorLoyalty)
+  const handleExplore = (event) => {
+    setAnchorExplore(event.currentTarget);
   };
-  const handleLoyalty = () => {
-    setOpenLoyalty(!openLoyalty);
+  const handleExploreClose = (event) => {
+    setAnchorExplore(null);
   };
+  const handleLoyalty = (event)=> {
+    setAnchorLoyalty(event.currentTarget)
+  }
+  const handleLoyaltyClose = () => {
+    setAnchorLoyalty(null);
+  }
 
   return (
     <Box sx={{
-        display: "flex",
+        display: {xs:"none", md:"flex"},
         justifyContent: 'space-between',
         alignItems: 'center',
-        width:'45%',
+        width:{md:'63%', lg:'50%'},
     }}>
       <Box>
         <Button
           variant="text"
           endIcon={<KeyboardArrowDownIcon />}
-          onClick={() => setOpenExplore(!openExplore)}
+          onClick={handleExplore}
         >
           Explore
         </Button>
-        <Menu open={openExplore} onClose={handleExplore}>
-          <MenuItem onClick={handleExplore}>Hotels & Resorts</MenuItem>
-          <MenuItem onClick={handleExplore}>Our Brands</MenuItem>
+        <Menu open={openExplore} onClose={handleExploreClose} anchorEl={anchorExplore}>
+          <MenuItem onClick={handleExploreClose}>Hotels & Resorts</MenuItem>
+          <MenuItem onClick={handleExploreClose}>Our Brands</MenuItem>
         </Menu>
       </Box>
       <Box><Button>Offers</Button></Box>
@@ -38,15 +46,15 @@ const NavTitles = () => {
         <Button
           variant="text"
           endIcon={<KeyboardArrowDownIcon />}
-          onClick={() => setOpenLoyalty(!openLoyalty)}
+          onClick={handleLoyalty}
         >
           Loyalty Program
         </Button>
-        <Menu open={openLoyalty} onClose={handleLoyalty}>
-          <MenuItem onClick={handleLoyalty}>Program Overview</MenuItem>
-          <MenuItem onClick={handleLoyalty}>Earn</MenuItem>
-          <MenuItem onClick={handleLoyalty}>Redeem</MenuItem>
-          <MenuItem onClick={handleLoyalty}>Tiers & Benifits</MenuItem>
+        <Menu open={openLoyalty} onClose={handleLoyaltyClose} anchorEl={anchorLoyalty}>
+          <MenuItem onClick={handleLoyaltyClose}>Program Overview</MenuItem>
+          <MenuItem onClick={handleLoyaltyClose}>Earn</MenuItem>
+          <MenuItem onClick={handleLoyaltyClose}>Redeem</MenuItem>
+          <MenuItem onClick={handleLoyaltyClose}>Tiers & Benifits</MenuItem>
         </Menu>
       </Box>
     </Box>
