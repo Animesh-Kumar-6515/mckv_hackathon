@@ -1,10 +1,8 @@
 import CloseIcon from '@mui/icons-material/Close';
 import React,{useState} from 'react'
-import InputBase from '@mui/material/InputBase';
-import { Box, Button, Paper } from '@mui/material';
+import { Box, Paper } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
 import SearchbarMiddle from './SearchbarMiddle';
-import "react-datepicker/dist/react-datepicker.css";
 import SearchbarTop from './SearchbarTop';
 import "./Searchbar.css"
 import SearchbarBottom from './SearchbarBottom';
