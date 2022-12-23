@@ -40,7 +40,13 @@ const SignIn = () => {
           <MenuItem onClick={handleLangClose}>English</MenuItem>
         </Menu>
       </Box>
-      <Button startIcon={<AccountCircleIcon />}>
+      <Button startIcon={<AccountCircleIcon />} sx={
+        {
+          minWidth:"40px",
+          borderRadius:"0px",
+          padding:"0px"
+        }
+      }>
         <Typography sx={{ display: { xs: "none", lg: "flex" } }}>
           SignIn or LogIn
         </Typography>
