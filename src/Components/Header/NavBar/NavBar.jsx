@@ -59,11 +59,15 @@ const NavBar = () => {
         </Collapse>
         <Divider />
         <ListItem disablePadding>
-          <ListItemButton>Offers</ListItemButton>
+          <ListItemButton>
+            <ListItemText primary='Offers' />
+          </ListItemButton>
         </ListItem>
         <Divider />
         <ListItem disablePadding>
-          <ListItemButton>Meetings & Events</ListItemButton>
+          <ListItemButton>
+            <ListItemText primary='Meetings & Events'/>
+          </ListItemButton>
         </ListItem>
         <Divider />
         <ListItem disablePadding>
