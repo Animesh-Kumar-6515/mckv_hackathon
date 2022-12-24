@@ -44,9 +44,9 @@ const SearchBar = () => {
 }} onClick={handleClick}>
 
 <Box sx={{
-        paddingTop:"12px",
+        paddingTop:"8px",
         paddingRight:"3px",
-        paddingLeft:"3px",
+        paddingLeft:"11px",
         borderBottom:"1px solid #ccc",
         borderTop:"1px solid #ccc",
         borderLeft:"1px solid #ccc"

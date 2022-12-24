@@ -1,6 +1,12 @@
 import React from 'react'
 import { Box, Button, Paper } from '@mui/material';
+import { DateTimePicker, MuiPickersUtilsProvider } from "@material-ui/pickers";
+import { KeyboardDateTimePicker } from "@material-ui/pickers";
+import DateFnsUtils from "@date-io/date-fns";
+
 const SearchbarMiddle = ({widthcss}) => {
+  const [selectedDate, handleDateChange] = React.useState(new Date());
+  const [selectedDate1, handleDateChange1] = React.useState(new Date());
   return (
     <Box sx={
         {
@@ -8,25 +14,31 @@ const SearchbarMiddle = ({widthcss}) => {
         }
     }>
  
-    <Button variant="contained" sx={{
-          width:widthcss,
-          height:"49px",
-          fontSize:"18px",
-          backgroundColor:"#ffb612",
-          color:"#000",
-          border:"0px",
-          marginRight:"5px"
-        }}>FIND HOTELS</Button>
-           <Button variant="contained" sx={{
-          width:widthcss,
-          height:"49px",
-          fontSize:"18px",
-          backgroundColor:"#ffb612",
-          color:"#000",
-          border:"0px",
-          marginLeft:"5px"
-        }}>FIND HOTELS</Button>
-       </Box>
+ <MuiPickersUtilsProvider utils={DateFnsUtils}>
+                    <KeyboardDateTimePicker
+                      variant="inline"
+                      label="Start"
+                      value={selectedDate}
+                      onChange={handleDateChange}
+                      format="yyyy/MM/dd HH:mm"
+                      KeyboardButtonProps={{
+                        "aria-label": "change date",
+                      }}
+                    />
+                  </MuiPickersUtilsProvider>
+                  <MuiPickersUtilsProvider utils={DateFnsUtils}>
+                    <KeyboardDateTimePicker
+                      variant="inline"
+                      label="Start"
+                      value={selectedDate}
+                      onChange={handleDateChange}
+                      format="yyyy/MM/dd HH:mm"
+                      KeyboardButtonProps={{
+                        "aria-label": "change date",
+                      }}
+                    />
+                  </MuiPickersUtilsProvider>
+  </Box>
   )
 }
 
