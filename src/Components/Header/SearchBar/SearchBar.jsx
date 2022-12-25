@@ -28,8 +28,8 @@ const SearchBar = () => {
       }
     }>
     <SearchbarTop widthcss={"30vw"}/>
-    <SearchbarMiddle widthcss={"60%"}/>
-    <SearchbarBottom widthcss={"25%"}/>
+    {/* <SearchbarMiddle widthcss={"35%"}/> */}
+    {/* <SearchbarBottom widthcss={"45%"}/> */}
    </Box>
 <Box sx={{
           display:{
