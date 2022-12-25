@@ -10,7 +10,7 @@ const Hotel = () => {
     border: "1px solid white",
     color: "white",
     fontWeight: "bolder",
-    padding:'8px 16px',
+    padding: "8px 16px",
     marginBottom: "30px",
   });
   const StyledBox = styled(motion.div)(({ theme }) => ({
@@ -39,12 +39,22 @@ const Hotel = () => {
     fontWeight: "bold",
     fontSize: "20px",
     padding: "15px 10px",
+    // fontFamily: "'Merienda', 'cursive'",
   });
 
   return (
-    <Box sx={{display:'flex', flexFlow: 'column', alignItems:'center', paddingTop:'40px'}}>
+    <Box
+      sx={{
+        display: "flex",
+        flexFlow: "column",
+        alignItems: "center",
+        paddingTop: "40px",
+      }}
+    >
       <Box>
-        <Typography variant='h4'>Discover Something New</Typography>
+        <Typography variant="h4" sx={{ fontFamily: "'Merienda', 'cursive'" }}>
+          Discover Something New
+        </Typography>
       </Box>
       <Box
         sx={{
@@ -52,7 +62,7 @@ const Hotel = () => {
           flexFlow: "wrap",
           justifyContent: "space-around",
           alignItems: "center",
-          width: '100%',
+          width: "100%",
           padding: "30px 5%",
         }}
       >
@@ -62,7 +72,10 @@ const Hotel = () => {
           "Hyatt Regency Amritsar",
           "Hyatt Regency Chandigarh",
         ].map((hotel) => (
-          <StyledBox whileHover={{ translateY: -15 }} transition={{duration: 0.4}}>
+          <StyledBox
+            whileHover={{ translateY: -15 }}
+            transition={{ duration: 0.4 }}
+          >
             <HotelName>{hotel}</HotelName>
             <StyledButton whileHover={{ scale: 1.1 }} whileTap={{ scale: 1 }}>
               View Hotel

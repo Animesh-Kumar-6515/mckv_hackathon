@@ -123,7 +123,7 @@ const NavBar = () => {
         </IconButton>
       </Box>
       <Box sx={{ color: "#0504aa" }} className="logo">
-        <Typography variant="h5" fontFamily="sans-serif" color="#0A66C2">
+        <Typography variant="h5" sx={{fontFamily: "'Merienda', 'cursive'"}} color="#0A66C2">
           World Of Hyatt
         </Typography>
       </Box>

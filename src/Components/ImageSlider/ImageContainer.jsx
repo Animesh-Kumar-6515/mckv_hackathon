@@ -30,7 +30,7 @@ const ImageContainer = ({ image, title, content, button, left }) => {
             padding: "40px",
           }}
         >
-          <Typography variant="h4">{title}</Typography>
+          <Typography variant="h4" sx={{fontFamily: "'Merienda', 'cursive'"}}>{title}</Typography>
           <Typography variant="body1" sx={{ padding: "25px 0" }}>
             {content}
           </Typography>
