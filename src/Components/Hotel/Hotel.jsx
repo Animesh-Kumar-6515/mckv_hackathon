@@ -7,10 +7,11 @@ import hotel1 from "../../Images/hotel1.jpg";
 const Hotel = () => {
   const StyledButton = styled(motion.button)({
     backgroundColor: "transparent",
-    border: "none",
+    border: "1px solid white",
     color: "white",
     fontWeight: "bolder",
-    paddingBottom: "10px",
+    padding:'8px 16px',
+    marginBottom: "30px",
   });
   const StyledBox = styled(motion.div)(({ theme }) => ({
     backgroundImage: `url(${hotel1})`,
@@ -64,7 +65,7 @@ const Hotel = () => {
           <StyledBox whileHover={{ translateY: -15 }} transition={{duration: 0.4}}>
             <HotelName>{hotel}</HotelName>
             <StyledButton whileHover={{ scale: 1.1 }} whileTap={{ scale: 1 }}>
-              View Hotel →
+              View Hotel
             </StyledButton>
           </StyledBox>
         ))}
