@@ -13,7 +13,9 @@ const SearchBar = () => {
   };
 
   return (
-    <Box sx={{position:'sticky', top: 0, zIndex:10, backgroundColor:'white'}}>
+    <Box
+      sx={{ position: "sticky", top: 0, zIndex: 10, backgroundColor: "white" }}
+    >
       <Box
         sx={{
           display: {
@@ -28,8 +30,8 @@ const SearchBar = () => {
         }}
       >
         <SearchbarTop widthcss={"30vw"} />
-        {/* <SearchbarMiddle widthcss={"35%"}/> */}
-        {/* <SearchbarBottom widthcss={"45%"}/> */}
+        <SearchbarMiddle widthcss={"35%"}/>
+        <SearchbarBottom widthcss={"45%"}/>
       </Box>
       <Box
         sx={{

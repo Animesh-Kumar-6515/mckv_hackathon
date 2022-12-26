@@ -12,7 +12,8 @@ const SearchbarBottom = ({widthcss}) => {
       fontSize:"18px",
       backgroundColor:"#ffb612",
       color:"#000",
-      border:"0px"
+      border:"0px",
+      
     }}>FIND HOTELS</Button>
    
    </>
