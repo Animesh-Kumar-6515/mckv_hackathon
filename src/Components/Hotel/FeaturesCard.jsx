@@ -10,9 +10,10 @@ export default function MediaCard({ img, text, para }) {
   return (
     <Card
       sx={{
-        maxWidth: 400,
+        maxWidth: 100,
         height: { xs: "500px", md: "480px" },
         margin: "10px",
+        display:"flex"
       }}
     >
       <CardMedia sx={{ height: 250 }} image={img} title="green iguana" />

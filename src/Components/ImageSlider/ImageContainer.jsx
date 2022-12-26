@@ -5,8 +5,9 @@ const ImageContainer = ({ image, title, content, button, left }) => {
     <>
       <CardMedia
         sx={{
-          height: "450px",
+          height: "420px",
           position: "relative",
+          
         }}
         image={image}
         title="hotel image"
@@ -20,7 +21,7 @@ const ImageContainer = ({ image, title, content, button, left }) => {
             left: left ? "0" : "none",
             right: left ? "none" : "0",
 
-            display: {xs:"none", md:'flex'},
+            display: {xs:"none", sm:'flex'},
             flexFlow: "column",
             justifyContent: "center",
             alignItems: "center",
@@ -43,7 +44,7 @@ const ImageContainer = ({ image, title, content, button, left }) => {
         sx={{
           background: "rgba(0,0,0,0.54)",
           color: "white",
-          display: {xs:"flex", md:'none'},
+          display: {xs:"flex", sm:'none'},
           flexFlow: "column",
           justifyContent: "center",
           alignItems: "center",

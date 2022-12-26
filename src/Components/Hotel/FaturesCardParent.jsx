@@ -34,7 +34,7 @@ const FaturesCardParent = () => {
           padding: "30px 5%",
         }}
       >
-        <FeaturesCard
+        {/* <FeaturesCard
           img={img1}
           text={"Feel at home at Hyatt House"}
           para={
@@ -47,7 +47,7 @@ const FaturesCardParent = () => {
           para={
             "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica"
           }
-        />
+        /> */}
         <FeaturesCard
           img={img1}
           text={"Feel at home at Hyatt House"}

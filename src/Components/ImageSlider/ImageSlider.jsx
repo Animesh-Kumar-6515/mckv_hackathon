@@ -15,7 +15,8 @@ const ImageSlider = () => {
     speed: 2000,
     autoplaySpeed: 5000,
     cssEase: "linear",
-    centerPadding:'20px',
+    // centerPadding:'20px',
+    // centerMode:"true"
   };
 
   const imageData = [
@@ -57,7 +58,10 @@ const ImageSlider = () => {
   ];
 
   return (
-    <Slider {...settings}>
+    <Slider {...settings} style={{
+      width:"100%",
+      // margin:"auto"
+    }}>
       {imageData.map((data) => (
         <div>
           <ImageContainer image={data[0]} title={data[1]} content={data[2]} button={data[3]} left={data[4]}/>

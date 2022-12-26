@@ -14,7 +14,10 @@ const Hotel = () => {
     marginBottom: "30px",
   });
   const StyledBox = styled(motion.div)(({ theme }) => ({
-    backgroundImage: `url(${hotel1})`,
+    background: "rgb(0,0,0)",
+background: `url(${hotel1}) , linear-gradient(0deg, rgba(241,0,0,0.7656104678199405) 23%, rgba(255,255,255,0.9112687311252626) 38%, rgba(255,255,255,1) 100%)`,
+
+
     borderRadius: "8px",
     height: "400px",
     display: "flex",
