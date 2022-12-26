@@ -51,11 +51,11 @@ background: `url(${hotel1}) , linear-gradient(0deg, rgba(241,0,0,0.7656104678199
         display: "flex",
         flexFlow: "column",
         alignItems: "center",
-        paddingTop: "40px",
+        paddingTop: "70px",
       }}
     >
       <Box>
-        <Typography variant="h4" sx={{ fontFamily: "'Merienda', 'cursive'" }}>
+        <Typography variant="h4" textAlign='center' sx={{ fontFamily: "'Merienda', 'cursive'" }}>
           Discover Something New
         </Typography>
       </Box>

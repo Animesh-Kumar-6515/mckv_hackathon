@@ -59,8 +59,8 @@ const ImageSlider = () => {
 
   return (
     <Slider {...settings} style={{
-      width:"100%",
-      // margin:"auto"
+      width:"90%",
+      margin:"auto"
     }}>
       {imageData.map((data) => (
         <div>
