@@ -49,7 +49,7 @@ const ImageContainer = ({ image, title, content, button, left }) => {
           justifyContent: "center",
           alignItems: "center",
           textAlign: "center",
-          height: "400px",
+          height: "300px",
           width: "100%",
           padding: "40px",
         }}

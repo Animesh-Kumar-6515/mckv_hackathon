@@ -15,8 +15,7 @@ const ImageSlider = () => {
     speed: 2000,
     autoplaySpeed: 5000,
     cssEase: "linear",
-    // centerPadding:'20px',
-    // centerMode:"true"
+    fade: true,
   };
 
   const imageData = [
@@ -43,8 +42,8 @@ const ImageSlider = () => {
     ],
     [
       img,
-      "Discover more rewarding stays at participating Park Hyatt hotels",
-      "Earn 2,000 Bonus Points per qualifying stay at several participating Park Hyatt hotels in Asia Pacific and North America from December 21, 2022 to February 28, 2023. Terms apply.",
+      "Discover rewarding stays",
+      "Earn 2,000 Bonus Points per qualifying stay at several participating Park Hyatt hotels in Asia to America. Terms apply.",
       "LEARN MORE",
       false,
     ],
@@ -58,13 +57,22 @@ const ImageSlider = () => {
   ];
 
   return (
-    <Slider {...settings} style={{
-      width:"90%",
-      margin:"auto"
-    }}>
+    <Slider
+      {...settings}
+      style={{
+        width: "90%",
+        margin: "auto",
+      }}
+    >
       {imageData.map((data) => (
         <div>
-          <ImageContainer image={data[0]} title={data[1]} content={data[2]} button={data[3]} left={data[4]}/>
+          <ImageContainer
+            image={data[0]}
+            title={data[1]}
+            content={data[2]}
+            button={data[3]}
+            left={data[4]}
+          />
         </div>
       ))}
     </Slider>

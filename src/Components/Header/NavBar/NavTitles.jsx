@@ -32,6 +32,7 @@ const NavTitles = () => {
           variant="text"
           endIcon={<KeyboardArrowDownIcon />}
           onClick={handleExplore}
+          sx={{color:'black',}}
         >
           Explore
         </Button>
@@ -40,13 +41,14 @@ const NavTitles = () => {
           <MenuItem onClick={handleExploreClose}>Our Brands</MenuItem>
         </Menu>
       </Box>
-      <Box><Button>Offers</Button></Box>
-      <Box><Button>Mettings & Events</Button></Box>
+      <Box><Button sx={{color:'black',}}>Offers</Button></Box>
+      <Box><Button sx={{color:'black',}}>Mettings & Events</Button></Box>
       <Box>
         <Button
           variant="text"
           endIcon={<KeyboardArrowDownIcon />}
           onClick={handleLoyalty}
+          sx={{color:'black',}}
         >
           Loyalty Program
         </Button>

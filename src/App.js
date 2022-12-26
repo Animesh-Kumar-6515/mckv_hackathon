@@ -4,6 +4,7 @@ import Footer from './Components/Footer/Footer';
 import Header from './Components/Header/Header'
 import Hotel from './Components/Hotel/Hotel';
 import ImageSlider from './Components/ImageSlider/ImageSlider';
+import Join from './Components/Join/Join';
 import Test from './Components/Test/Test';
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Hotel />
       {/* <Test/> */}
       <FaturesCardParent/>
+      <Join />
       <Footer />
     </div>
   );

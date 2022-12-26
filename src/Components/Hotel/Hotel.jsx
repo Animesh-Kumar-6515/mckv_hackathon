@@ -14,10 +14,10 @@ const Hotel = () => {
     marginBottom: "30px",
   });
   const StyledBox = styled(motion.div)(({ theme }) => ({
-    background: "rgb(0,0,0)",
-background: `url(${hotel1}) , linear-gradient(0deg, rgba(241,0,0,0.7656104678199405) 23%, rgba(255,255,255,0.9112687311252626) 38%, rgba(255,255,255,1) 100%)`,
-
-
+    // background: "rgb(0,0,0)",
+    background: `linear-gradient(0deg, rgba(0,0,0,0.7516048655790442) 0%,
+                 rgba(255,255,255,0) 100%, rgba(255,255,255,0.9112687311252626) 100%),
+                 url(${hotel1})`,
     borderRadius: "8px",
     height: "400px",
     display: "flex",
@@ -55,7 +55,11 @@ background: `url(${hotel1}) , linear-gradient(0deg, rgba(241,0,0,0.7656104678199
       }}
     >
       <Box>
-        <Typography variant="h4" textAlign='center' sx={{ fontFamily: "'Merienda', 'cursive'" }}>
+        <Typography
+          variant="h4"
+          textAlign="center"
+          sx={{ fontFamily: "'Merienda', 'cursive'" }}
+        >
           Discover Something New
         </Typography>
       </Box>

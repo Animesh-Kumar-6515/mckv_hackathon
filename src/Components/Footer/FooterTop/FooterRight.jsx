@@ -23,12 +23,14 @@ const FooterRight = () => {
     fontSize: "20px",
     fontWeight: '400'
   }));
-  const StyledButton = styled('button')(() => ({
+  const StyledButton = styled(Button)(() => ({
     backgroundColor:'#282828',
     color: 'white',
     border: '1px solid white',
     padding: '10px 100px',
-    margin: '20px 0px'
+    margin: '20px 0px',
+    borderRadius:0,
+    
   }))
   const Image = styled('img')(() => ({
     width: '100px',
