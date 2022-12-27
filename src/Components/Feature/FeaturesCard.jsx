@@ -11,7 +11,9 @@ import {
 
 export default function MediaCard({ img, text, para, btn, dir }) {
   return (
-    <Card sx={{ borderRadius:0, display: dir == "column" ? { md: "flex" } : {} }}>
+    <Card
+      sx={{ borderRadius: 0, display: dir === "column" ? { md: "flex" } : {} }}
+    >
       <CardMedia
         component="img"
         sx={{ height: 250 }}
@@ -21,8 +23,8 @@ export default function MediaCard({ img, text, para, btn, dir }) {
       <Box>
         <CardContent
           sx={{
-            marginTop:'15px',
-            height:'180px',
+            marginTop: "15px",
+            height: "180px",
             display: "flex",
             flexDirection: "column",
             alignItems: "center",

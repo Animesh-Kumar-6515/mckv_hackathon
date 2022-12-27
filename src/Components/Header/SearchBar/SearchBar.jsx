@@ -1,99 +1,52 @@
 import CloseIcon from "@mui/icons-material/Close";
 import React, { useState } from "react";
-import { Box, Paper } from "@mui/material";
+import { Button, useMediaQuery } from "@mui/material";
+import { useTheme } from "@mui/material/styles";
 import SearchIcon from "@mui/icons-material/Search";
 import SearchbarMiddle from "./SearchbarMiddle";
 import SearchbarTop from "./SearchbarTop";
-import "./Searchbar.css";
 import SearchbarBottom from "./SearchbarBottom";
+import { Grid } from "@mui/material";
 const SearchBar = () => {
   const [dropdown, setdropdown] = useState(false);
+  const theme = useTheme();
   const handleClick = () => {
     setdropdown(!dropdown);
   };
-
+  const isBig = useMediaQuery(theme.breakpoints.up("md"));
   return (
-    <Box
-      sx={{ position: "sticky", top: 0, zIndex: 10, backgroundColor: "white" }}
-    >
-      <Box
+    <>
+      <Button
         sx={{
-          display: {
-            lg: "flex",
-            md: "none",
-            xs: "none",
-            sm: "none",
-          },
-          justifyContent: "space-between",
-          padding: "10px 6rem",
+          backgroundColor: "#ccc",
           width: "100%",
-        }}
-      >
-        <SearchbarTop widthcss={"30vw"} />
-        <SearchbarMiddle widthcss={"35%"}/>
-        <SearchbarBottom widthcss={"45%"}/>
-      </Box>
-      <Box
-        sx={{
-          display: {
-            lg: "none",
-            md: "block",
-            xs: "block",
-            sm: "block",
+          height: "40px",
+          padding: "0 5%",
+          borderRadius: "0px",
+          justifyContent: "flex-start",
+          display: { xs: "sticky", md: "none" },
+          "&:hover": {
+            backgroundColor: "#ccc",
           },
         }}
-      >
-        <Paper
-          sx={{
-            backgroundColor: "#ccc",
-          }}
-          onClick={handleClick}
-        >
-          <Box
-            sx={{
-              paddingTop: "8px",
-              paddingRight: "3px",
-              paddingLeft: "11px",
-              borderBottom: "1px solid #ccc",
-              borderTop: "1px solid #ccc",
-              borderLeft: "1px solid #ccc",
-            }}
-          >
-            {!dropdown ? <CloseIcon /> : <SearchIcon />}
-          </Box>
-        </Paper>
-        <Box
-          sx={{
-            padding: "15px",
-            display: dropdown ? "none" : "block",
-            height: "auto",
-            width: "100%",
-          }}
-        >
-          <Paper
-            sx={{
-              margin: "10px",
-            }}
-          >
-            <SearchbarTop widthcss={"100%"} />
-          </Paper>
-          <Paper
-            sx={{
-              margin: "10px",
-            }}
-          >
-            <SearchbarMiddle displaycss={"block"} widthcss={"50%"} />
-          </Paper>
-          <Paper
-            sx={{
-              margin: "10px",
-            }}
-          >
-            <SearchbarBottom widthcss={"100%"} />
-          </Paper>
-        </Box>
-      </Box>
-    </Box>
+        onClick={handleClick}
+        startIcon={!dropdown ? <SearchIcon /> : <CloseIcon />}
+        disableRipple
+      ></Button>
+      {(dropdown || isBig) && (
+        <Grid container spacing={2} padding="20px 5%">
+          <Grid item md={5} xs={12} sx={{}}>
+            <SearchbarTop />
+          </Grid>
+          <Grid item md={4} xs={12}>
+            <SearchbarMiddle />
+          </Grid>
+          <Grid item md={3} xs={12}>
+            <SearchbarBottom />
+          </Grid>
+        </Grid>
+      )}
+    </>
   );
 };
 

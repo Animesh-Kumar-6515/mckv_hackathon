@@ -1,23 +1,24 @@
-import React from 'react'
-import { Box, Button, Paper } from '@mui/material';
-import SearchIcon from '@mui/icons-material/Search';
+import React from "react";
+import { Button } from "@mui/material";
 
-const SearchbarBottom = ({widthcss}) => {
+const SearchbarBottom = () => {
   return (
-   <>
- 
-<Button variant="contained" sx={{
-      width:widthcss,
-      height:"49px",
-      fontSize:"18px",
-      backgroundColor:"#ffb612",
-      color:"#000",
-      border:"0px",
-      
-    }}>FIND HOTELS</Button>
-   
-   </>
-  )
-}
+    <>
+      <Button
+        variant="contained"
+        sx={{
+          width: "100%",
+          height: "56px",
+          fontSize: "18px",
+          backgroundColor: "#ffb612",
+          color: "#000",
+          borderRadius: "0px",
+        }}
+      >
+        FIND HOTELS
+      </Button>
+    </>
+  );
+};
 
-export default SearchbarBottom
+export default SearchbarBottom;

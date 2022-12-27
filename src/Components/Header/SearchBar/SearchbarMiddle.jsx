@@ -6,7 +6,7 @@ import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { DesktopDatePicker } from "@mui/x-date-pickers/DesktopDatePicker";
 import { MobileDatePicker } from "@mui/x-date-pickers/MobileDatePicker";
 
-const SearchbarMiddle = ({ widthcss }) => {
+const SearchbarMiddle = () => {
   const [value, setValue] = useState(dayjs("2014-08-18"));
 
   const handleChange = (newValue) => {
@@ -15,17 +15,24 @@ const SearchbarMiddle = ({ widthcss }) => {
 
   return (
     <Box>
-      <Box sx={{display: {xs:'none', md:'flex'}}}>
+      <Box
+        sx={{
+          display: { xs: "none", md: "flex" },
+        }}
+      >
         <LocalizationProvider dateAdapter={AdapterDayjs}>
           <DesktopDatePicker
-            label="Date desktop"
             inputFormat="MM/DD/YYYY"
             value={value}
             onChange={handleChange}
             renderInput={(params) => <TextField {...params} />}
           />
+          <Box
+            sx={{
+              width: "5px",
+            }}
+          ></Box>
           <DesktopDatePicker
-            label="Date desktop"
             inputFormat="MM/DD/YYYY"
             value={value}
             onChange={handleChange}
@@ -33,17 +40,20 @@ const SearchbarMiddle = ({ widthcss }) => {
           />
         </LocalizationProvider>
       </Box>
-      <Box sx={{display: {xs:'static', md:'none'}}}>
+      <Box
+        sx={{
+          display: { xs: "flex", md: "none" },
+          justifyContent: "space-around",
+        }}
+      >
         <LocalizationProvider dateAdapter={AdapterDayjs}>
           <MobileDatePicker
-            label="Date mobile"
             inputFormat="MM/DD/YYYY"
             value={value}
             onChange={handleChange}
             renderInput={(params) => <TextField {...params} />}
           />
           <MobileDatePicker
-            label="Date mobile"
             inputFormat="MM/DD/YYYY"
             value={value}
             onChange={handleChange}

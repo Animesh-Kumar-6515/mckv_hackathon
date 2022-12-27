@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Paper, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import { motion } from "framer-motion";
 import { styled } from "@mui/material/styles";
 import hotel1 from "../../Images/hotel1.jpg";
