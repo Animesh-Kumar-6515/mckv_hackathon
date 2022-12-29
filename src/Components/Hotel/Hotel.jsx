@@ -2,7 +2,10 @@ import React from "react";
 import { Box, Typography } from "@mui/material";
 import { motion } from "framer-motion";
 import { styled } from "@mui/material/styles";
-import hotel1 from "../../Images/hotel1.jpg";
+import hotel1 from "../../Images/paperImg2resized.jpg";
+import hotel2 from "../../Images/paperim1.jpg";
+import hotel3 from "../../Images/paperImg3resized.jpg";
+import hotel4 from "../../Images/paperImg33.jpg";
 
 const Hotel = () => {
   const StyledButton = styled(motion.button)({
@@ -13,11 +16,11 @@ const Hotel = () => {
     padding: "8px 16px",
     marginBottom: "30px",
   });
-  const StyledBox = styled(motion.div)(({ theme }) => ({
+  const StyledBox = styled(motion.div)(({ theme,img }) => ({
     // background: "rgb(0,0,0)",
     background: `linear-gradient(0deg, rgba(0,0,0,0.7516048655790442) 0%,
                  rgba(255,255,255,0) 100%, rgba(255,255,255,0.9112687311252626) 100%),
-                 url(${hotel1})`,
+                 url(${img})`,
     borderRadius: "8px",
     height: "400px",
     display: "flex",
@@ -74,16 +77,17 @@ const Hotel = () => {
         }}
       >
         {[
-          "Hyatt Centric Goa",
-          "Grand Hyatt Goa",
-          "Hyatt Regency Amritsar",
-          "Hyatt Regency Chandigarh",
+          ["Hyatt Centric Goa",hotel1],
+          ["Grand Hyatt Goa",hotel2],
+          ["Hyatt Regency Amritsar",hotel3],
+          ["Hyatt Regency Chandigarh",hotel4]
         ].map((hotel) => (
           <StyledBox
             whileHover={{ translateY: -15 }}
             transition={{ duration: 0.4 }}
+            img={hotel[1]}
           >
-            <HotelName>{hotel}</HotelName>
+            <HotelName>{hotel[0]}</HotelName>
             <StyledButton whileHover={{ scale: 1.1 }} whileTap={{ scale: 1 }}>
               View Hotel
             </StyledButton>

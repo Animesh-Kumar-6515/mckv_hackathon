@@ -1,6 +1,6 @@
 import CloseIcon from "@mui/icons-material/Close";
 import React, { useState } from "react";
-import { Button, useMediaQuery } from "@mui/material";
+import { Box,Button, useMediaQuery } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 import SearchIcon from "@mui/icons-material/Search";
 import SearchbarMiddle from "./SearchbarMiddle";
@@ -15,7 +15,11 @@ const SearchBar = () => {
   };
   const isBig = useMediaQuery(theme.breakpoints.up("md"));
   return (
-    <>
+    <Box sx={{position: "-webkit-sticky",
+      position: "sticky",
+      top: 0,
+      backgroundColor:"white",
+      zIndex:5}}>
       <Button
         sx={{
           backgroundColor: "#ccc",
@@ -46,7 +50,8 @@ const SearchBar = () => {
           </Grid>
         </Grid>
       )}
-    </>
+
+    </Box>
   );
 };
 

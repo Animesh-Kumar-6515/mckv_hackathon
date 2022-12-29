@@ -1,6 +1,9 @@
 import React from "react";
 import FeaturesCard from "./FeaturesCard";
 import img1 from "./../../Images/hotel2.jpg";
+import img2 from "./../../Images/cardImg1.jpg";
+import img3 from "./../../Images/cardImg2.jpg";
+import img4 from "./../../Images/cardImg3.jpg";
 import { Box } from "@mui/system";
 import { Grid, Typography } from "@mui/material";
 const FaturesCardParent = () => {
@@ -14,7 +17,7 @@ const FaturesCardParent = () => {
       4,
     ],
     [
-      img1,
+      img2,
       "Explore flavorful horizons",
       "Culinary Stories are a curated collection of hotels and restaurants that enable you to truly savor the flavors of a place and a people, distilled, perfected, and presented upon your plate.",
       "SEE CULINARY STORIES >",
@@ -22,7 +25,7 @@ const FaturesCardParent = () => {
       4,
     ],
     [
-      img1,
+      img3,
       "Experience the wonders of winter",
       "Snow Days Stories are a curated collection of hotels and resorts where you're free to zoom or cruise at whatever speed suits you, then seek food, drink and perhaps a roaring fire at the mountain base.",
       "SEE SNOW DAYS STORIES >",
@@ -30,7 +33,7 @@ const FaturesCardParent = () => {
       4,
     ],
     [
-      img1,
+      img4,
       "The perfect pace: Hyatt resorts",
       "Get away without ever having to leave when you stay at a Hyatt resort and enjoy an idyllic escape your way.",
       "LEARN MORE >",
