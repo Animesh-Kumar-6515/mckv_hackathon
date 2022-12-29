@@ -83,12 +83,12 @@ const Hotel = () => {
           ["Hyatt Regency Chandigarh",hotel4]
         ].map((hotel) => (
           <StyledBox
-            whileHover={{ translateY: -15 }}
+            whileHover={{ translateY: -15}}
             transition={{ duration: 0.4 }}
             img={hotel[1]}
           >
             <HotelName>{hotel[0]}</HotelName>
-            <StyledButton whileHover={{ scale: 1.1 }} whileTap={{ scale: 1 }}>
+            <StyledButton whileHover={{ scale: 1.1}} whileTap={{ scale: 1 }}>
               View Hotel
             </StyledButton>
           </StyledBox>

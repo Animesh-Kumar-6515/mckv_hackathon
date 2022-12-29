@@ -1,6 +1,6 @@
 import { Box, Button, Grid, styled, Typography } from "@mui/material";
 import React from "react";
-import img from "../../Images/hotel1.jpg";
+import img from "../../Images/paperImg1.jpg";
 import BusinessCenterOutlinedIcon from "@mui/icons-material/BusinessCenterOutlined";
 import LoyaltyOutlinedIcon from "@mui/icons-material/LoyaltyOutlined";
 import NightlightOutlinedIcon from "@mui/icons-material/NightlightOutlined";

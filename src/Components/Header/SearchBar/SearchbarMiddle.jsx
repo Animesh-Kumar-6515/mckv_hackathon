@@ -7,7 +7,11 @@ import { DesktopDatePicker } from "@mui/x-date-pickers/DesktopDatePicker";
 import { MobileDatePicker } from "@mui/x-date-pickers/MobileDatePicker";
 
 const SearchbarMiddle = () => {
-  const [value, setValue] = useState(dayjs("2014-08-18"));
+  const date = new Date();
+  const year = date.getFullYear()
+  const month = date.getMonth()
+  const day =  date.getDate();
+  const [value, setValue] = useState(dayjs(`${year}-${month}-${day}`));
 
   const handleChange = (newValue) => {
     setValue(newValue);
