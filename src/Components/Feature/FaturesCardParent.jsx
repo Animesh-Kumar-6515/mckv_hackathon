@@ -52,7 +52,11 @@ const FaturesCardParent = () => {
       }}
     >
       <Box>
-        <Typography variant="h4" textAlign='center' sx={{ fontFamily: "'Merienda', 'cursive'" }}>
+        <Typography
+          variant="h4"
+          textAlign="center"
+          sx={{ fontFamily: "Oswald, sans-serif" }}
+        >
           Stay Your Way at Hyatt
         </Typography>
       </Box>

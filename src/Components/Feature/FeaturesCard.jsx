@@ -33,7 +33,7 @@ export default function MediaCard({ img, text, para, btn, dir }) {
           <Typography
             gutterBottom
             variant="h5"
-            sx={{ fontFamily: "'Merienda', 'cursive'", textAlign: "center" }}
+            sx={{ fontFamily: "Oswald, sans-serif", textAlign: "center" }}
           >
             {text}
           </Typography>

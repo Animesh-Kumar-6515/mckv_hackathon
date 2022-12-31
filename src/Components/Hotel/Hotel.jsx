@@ -16,7 +16,7 @@ const Hotel = () => {
     padding: "8px 16px",
     marginBottom: "30px",
   });
-  const StyledBox = styled(motion.div)(({ theme,img }) => ({
+  const StyledBox = styled(motion.div)(({ theme, img }) => ({
     // background: "rgb(0,0,0)",
     background: `linear-gradient(0deg, rgba(0,0,0,0.7516048655790442) 0%,
                  rgba(255,255,255,0) 100%, rgba(255,255,255,0.9112687311252626) 100%),
@@ -45,7 +45,6 @@ const Hotel = () => {
     fontWeight: "bold",
     fontSize: "20px",
     padding: "15px 10px",
-    // fontFamily: "'Merienda', 'cursive'",
   });
 
   return (
@@ -61,7 +60,7 @@ const Hotel = () => {
         <Typography
           variant="h4"
           textAlign="center"
-          sx={{ fontFamily: "'Merienda', 'cursive'" }}
+          sx={{ fontFamily: "Oswald, sans-serif" }}
         >
           Discover Something New
         </Typography>
@@ -77,18 +76,18 @@ const Hotel = () => {
         }}
       >
         {[
-          ["Hyatt Centric Goa",hotel1],
-          ["Grand Hyatt Goa",hotel2],
-          ["Hyatt Regency Amritsar",hotel3],
-          ["Hyatt Regency Chandigarh",hotel4]
+          ["Hyatt Centric Goa", hotel1],
+          ["Grand Hyatt Goa", hotel2],
+          ["Hyatt Regency Amritsar", hotel3],
+          ["Hyatt Regency Chandigarh", hotel4],
         ].map((hotel) => (
           <StyledBox
-            whileHover={{ translateY: -15}}
+            whileHover={{ translateY: -15 }}
             transition={{ duration: 0.4 }}
             img={hotel[1]}
           >
             <HotelName>{hotel[0]}</HotelName>
-            <StyledButton whileHover={{ scale: 1.1}} whileTap={{ scale: 1 }}>
+            <StyledButton whileHover={{ scale: 1.1 }} whileTap={{ scale: 1 }}>
               View Hotel
             </StyledButton>
           </StyledBox>

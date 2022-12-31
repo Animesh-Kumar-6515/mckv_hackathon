@@ -7,7 +7,6 @@ const ImageContainer = ({ image, title, content, button, left }) => {
         sx={{
           height: "420px",
           position: "relative",
-          
         }}
         image={image}
         title="hotel image"
@@ -21,7 +20,7 @@ const ImageContainer = ({ image, title, content, button, left }) => {
             left: left ? "0" : "none",
             right: left ? "none" : "0",
 
-            display: {xs:"none", sm:'flex'},
+            display: { xs: "none", sm: "flex" },
             flexFlow: "column",
             justifyContent: "center",
             alignItems: "center",
@@ -31,7 +30,9 @@ const ImageContainer = ({ image, title, content, button, left }) => {
             padding: "40px",
           }}
         >
-          <Typography variant="h4" sx={{fontFamily: "'Merienda', 'cursive'"}}>{title}</Typography>
+          <Typography variant="h4" sx={{ fontFamily: "Oswald, sans-serif" }}>
+            {title}
+          </Typography>
           <Typography variant="body1" sx={{ padding: "25px 0" }}>
             {content}
           </Typography>
@@ -44,7 +45,7 @@ const ImageContainer = ({ image, title, content, button, left }) => {
         sx={{
           background: "rgba(0,0,0,0.54)",
           color: "white",
-          display: {xs:"flex", sm:'none'},
+          display: { xs: "flex", sm: "none" },
           flexFlow: "column",
           justifyContent: "center",
           alignItems: "center",

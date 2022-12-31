@@ -43,7 +43,7 @@ const NavBar = () => {
       <List>
         <ListItem disablePadding>
           <ListItemButton onClick={() => setOpenExplore(!openExplore)}>
-          <ListItemText primary="Explore" />
+            <ListItemText primary="Explore" />
             {openExplore ? <ExpandLess /> : <ExpandMore />}
           </ListItemButton>
         </ListItem>
@@ -60,13 +60,13 @@ const NavBar = () => {
         <Divider />
         <ListItem disablePadding>
           <ListItemButton>
-            <ListItemText primary='Offers' />
+            <ListItemText primary="Offers" />
           </ListItemButton>
         </ListItem>
         <Divider />
         <ListItem disablePadding>
           <ListItemButton>
-            <ListItemText primary='Meetings & Events'/>
+            <ListItemText primary="Meetings & Events" />
           </ListItemButton>
         </ListItem>
         <Divider />
@@ -123,7 +123,11 @@ const NavBar = () => {
         </IconButton>
       </Box>
       <Box sx={{ color: "#0504aa" }} className="logo">
-        <Typography variant="h5" sx={{fontFamily: "'Merienda', 'cursive'"}} color="#0A66C2">
+        <Typography
+          variant="h5"
+          sx={{ fontFamily: "Oswald, sans-serif" }}
+          color="#0A66C2"
+        >
           World Of Hyatt
         </Typography>
       </Box>

@@ -32,7 +32,7 @@ const Join = () => {
   ];
 
   const titleStyle = {
-    fontFamily: "'Merienda', 'cursive'",
+    fontFamily: "Oswald, sans-serif",
     textAlign: "center",
   };
 
@@ -58,7 +58,7 @@ const Join = () => {
           World Of Hyatt
         </Typography>
       </Box>
-      <Grid container spacing={2} margin='30px 0'>
+      <Grid container spacing={2} margin="30px 0">
         {joinData.map((data) => (
           <JoinItem logo={data[0]} title={data[1]} text={data[2]}></JoinItem>
         ))}
@@ -68,7 +68,7 @@ const Join = () => {
           sx={{
             color: "white",
             border: "1px solid white",
-            padding: '10px 20vw',
+            padding: "10px 20vw",
             borderRadius: "0",
           }}
         >

@@ -3,7 +3,7 @@ import React from "react";
 
 const JoinItem = ({ logo, title, text }) => {
   const titleStyle = {
-    fontFamily: "'Merienda', 'cursive'",
+    fontFamily: "Oswald, sans-serif",
     textAlign: "center",
   };
 
@@ -13,7 +13,12 @@ const JoinItem = ({ logo, title, text }) => {
       xs={12}
       sm={6}
       md={3}
-      sx={{ display: "flex", justifyContent: "center", alignItems: "center" , flexDirection:'column'}}
+      sx={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        flexDirection: "column",
+      }}
     >
       <Box
         sx={{
@@ -34,7 +39,9 @@ const JoinItem = ({ logo, title, text }) => {
         </Typography>
       </Box>
       <Box>
-        <Typography gutterBottom textAlign='center'>{text}</Typography>
+        <Typography gutterBottom textAlign="center">
+          {text}
+        </Typography>
       </Box>
     </Grid>
   );
