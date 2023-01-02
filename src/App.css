@@ -3,16 +3,11 @@
   padding: 0;
   box-sizing: border-box;
 }
-.slick-prev, .slick-next {
-background:rgb(253, 13, 13);
-color: black;
+.slick-prev {
+  left: 1% !important;
+  z-index: 1;
 }
-.slick-prev:before, .slick-next:before {
-  font-family: 'slick';
-  font-size: 20px;
-  line-height: 1;
-  opacity: .75;
-  color: black;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.slick-next {
+  right: 1% !important;
+  z-index: 1;
 }
