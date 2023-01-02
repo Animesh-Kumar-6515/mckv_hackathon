@@ -16,7 +16,7 @@ export default function MediaCard({ img, text, para, btn, dir }) {
     >
       <CardMedia
         component="img"
-        sx={{ height: 250 }}
+        sx={{ height: 282 }}
         image={img}
         title="mckv hackathon"
       />

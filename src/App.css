@@ -4,6 +4,15 @@
   box-sizing: border-box;
 }
 .slick-prev, .slick-next {
-background:#ccc;
+background:rgb(253, 13, 13);
 color: black;
+}
+.slick-prev:before, .slick-next:before {
+  font-family: 'slick';
+  font-size: 20px;
+  line-height: 1;
+  opacity: .75;
+  color: black;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
